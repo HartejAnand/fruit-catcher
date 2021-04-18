@@ -30,7 +30,7 @@ class Form{
         this.reset.style('height', '30px');
         this.reset.style('background', 'lightpink');
 
-        this.button.mousePressed(() => {
+        this.button.mousePressed(() => { 
             this.input.hide();
             this.button.hide();
             player.name = this.input.value();
@@ -44,9 +44,12 @@ class Form{
             this.greeting.style('font-size', '100px');
         });
 
+
+
         this.reset.mousePressed(() => {
             //add code to reset the values of the gameState and the playerCount nodes to 0 in the database
-            
+            game.update(0);
+            player.updateCount(0);
         });
 
     }
